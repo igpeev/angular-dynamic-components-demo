@@ -2,7 +2,11 @@
 
     <app-card [cardType]="CardTypeEnum.SOURCE"></app-card>
 
-    <button type="button" (click)="onSwitchPlacesClicked()">SWITCH PLACES</button>
+    <button type="button"
+            class="btn btn-primary app-button"
+            (click)="onSwitchPlacesClicked()">
+        SWITCH PLACES
+    </button>
 
     <app-card [cardType]="CardTypeEnum.DESTINATION"></app-card>
 
