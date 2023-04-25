@@ -1,0 +1,22 @@
+:host {
+    margin: 2rem;
+}
+
+.app-card {
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 20rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.app-source {
+    background-color: lawngreen;
+}
+
+.app-destination {
+    background-color: maroon;
+}

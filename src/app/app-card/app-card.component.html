@@ -1,0 +1,6 @@
+<div class="app-card" [ngClass]="{
+            'app-source': cardType === CardTypeEnum.SOURCE,
+            'app-destination': cardType === CardTypeEnum.DESTINATION
+        }">
+    {{ cardType }}
+</div>
