@@ -14,10 +14,10 @@ export enum CardTypeEnum {
 export class AppCardComponent implements OnInit {
     @Input() cardType?: CardTypeEnum;
 
+    public readonly CardTypeEnum = CardTypeEnum;
+
     public ngOnInit() {
         // confirm in browser console this logs only once (during initial component init)
         console.log('[AppCardComponent] init...', this.cardType);
     }
-
-    public readonly CardTypeEnum = CardTypeEnum;
 }
