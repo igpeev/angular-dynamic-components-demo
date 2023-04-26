@@ -24,3 +24,17 @@
 </ng-template>
 
 <hr />
+
+<div class="app-container" [ngClass]="{ 'app-switched': isSwitched }">
+
+    <app-card [cardType]="CardTypeEnum.SOURCE"></app-card>
+
+    <button type="button"
+            class="btn btn-primary app-button app-switch-places-button"
+            (click)="onSwitchPlacesWithCssClicked()">
+        SWITCH PLACES
+    </button>
+
+    <app-card [cardType]="CardTypeEnum.DESTINATION"></app-card>
+
+</div>

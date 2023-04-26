@@ -1,8 +1,13 @@
 .app-container {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .app-button {
     height: 3rem;
+}
+
+.app-switched {
+    flex-direction: row-reverse;
 }

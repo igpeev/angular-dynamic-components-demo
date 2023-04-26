@@ -21,6 +21,8 @@ import { AppCardComponent, CardTypeEnum } from './app-card/app-card.component';
 export class AppComponent implements AfterViewInit, OnDestroy {
     public readonly CardTypeEnum = CardTypeEnum;
 
+    public isSwitched = false;
+
     #sourceAndDestinationCardAnchorViewContainerRef!: ViewContainerRef;
     @ViewChild('sourceAndDestinationCardAnchor', { read: ViewContainerRef })
     private set nameIsImmaterial_0(anchorViewContainerRef: ViewContainerRef) {
@@ -83,6 +85,11 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
         this.#sourceAndDestinationCardAnchorViewContainerRef.move(this.#sourceEmbeddedViewRef, destinationIndex);
         this.#sourceAndDestinationCardAnchorViewContainerRef.move(this.#destinationEmbeddedViewRef, sourceIndex);
+    }
+
+    public onSwitchPlacesWithCssClicked() {
+        console.log('SWITCH places with CSS clicked !');
+        this.isSwitched = !this.isSwitched;
     }
 
     private destroyDynamicComponents() {
