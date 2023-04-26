@@ -1,13 +1,21 @@
 <div class="app-container">
 
-    <app-card [cardType]="CardTypeEnum.SOURCE"></app-card>
+    <ng-container #sourceAndDestinationCardAnchor></ng-container>
 
+</div>
+
+<ng-template #sourceTemplate>
+    <app-card [cardType]="CardTypeEnum.SOURCE"></app-card>
+</ng-template>
+
+<ng-template #switchSourceAndDestinationButtonTemplate>
     <button type="button"
-            class="btn btn-primary app-button"
+            class="btn btn-primary app-button app-switch-places-button"
             (click)="onSwitchPlacesClicked()">
         SWITCH PLACES
     </button>
+</ng-template>
 
+<ng-template #destinationTemplate>
     <app-card [cardType]="CardTypeEnum.DESTINATION"></app-card>
-
-</div>
+</ng-template>
