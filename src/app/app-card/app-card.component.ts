@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 export enum CardTypeEnum {
     SOURCE = 'source',
@@ -9,6 +9,7 @@ export enum CardTypeEnum {
     selector: 'app-card',
     templateUrl: './app-card.component.html',
     styleUrls: ['./app-card.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppCardComponent implements OnInit {
     @Input() cardType?: CardTypeEnum;
